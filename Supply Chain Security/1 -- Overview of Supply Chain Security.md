@@ -31,6 +31,10 @@ This was not always obvious. For years, security teams focused on the perimeter 
 
 KodeKloud uses a factory analogy that maps precisely to Kubernetes deployments. Understanding this mapping is fundamental:
 
+![Supply chain security four-phase process — quality control at each stage ensures product safety before finalization](https://kodekloud.com/kk-media/image/upload/v1752871698/notes-assets/images/Certified-Kubernetes-Security-Specialist-CKS-Overview-of-Supply-Chain-Security/frame_60.jpg)
+
+The four phases shown above map directly to the Kubernetes software supply chain:
+
 ```
 Physical Factory                    Kubernetes Software Supply Chain
 ─────────────────────────────────────────────────────────────────────
@@ -120,6 +124,8 @@ Understanding real attacks builds intuition for what the controls in this module
 ## The Four Stages of Kubernetes Supply Chain Security
 
 The KodeKloud source outlines four stages. Here they are, expanded with the Kubernetes-specific tools and controls for each:
+
+![Supply Chain Security — Source, Build, Test, and Deploy stages each verified with a green check](https://kodekloud.com/kk-media/image/upload/v1752871699/notes-assets/images/Certified-Kubernetes-Security-Specialist-CKS-Overview-of-Supply-Chain-Security/frame_150.jpg)
 
 ```mermaid
 graph LR
@@ -283,6 +289,8 @@ CI/CD Pipeline gate:
 
 The deploy stage is the **last line of defence** before code runs in your cluster. Even if every previous stage was perfect, you need to enforce rules at admission to catch anything that bypasses CI/CD (manual `kubectl apply`, drift, etc.).
 
+![Implement Deployment Security — Pod Security Policies, Network Policies, and Role-Based Access Control (RBAC)](https://kodekloud.com/kk-media/image/upload/v1752871700/notes-assets/images/Certified-Kubernetes-Security-Specialist-CKS-Overview-of-Supply-Chain-Security/frame_200.jpg)
+
 **Controls at deploy stage:**
 
 ```yaml
@@ -386,6 +394,8 @@ slsa-verifier verify-image registry.io/myapp:v1.2.3 \
 ---
 
 ## Benefits of Supply Chain Security — Expanded
+
+![Supply chain security benefits — early vulnerability detection, resource management, compliance, incident response, and enhanced security posture across all stages](https://kodekloud.com/kk-media/image/upload/v1752871701/notes-assets/images/Certified-Kubernetes-Security-Specialist-CKS-Overview-of-Supply-Chain-Security/frame_240.jpg)
 
 KodeKloud lists five benefits. Here's a deeper explanation of each plus additional ones:
 
